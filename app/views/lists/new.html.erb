@@ -36,6 +36,7 @@
 <div class="container">
   <%= simple_form_for [ @list ] do |f| %>
     <%= f.input :name, label: "Name:"%>
+    <%= f.input :photo, label: "Photo:"%>
     <%= f.submit "Add a list", class: "btn btn-outline-secondary" %>
   <% end %>
 </div>

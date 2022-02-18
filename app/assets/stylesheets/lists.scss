@@ -112,14 +112,17 @@ abbr[title*="required"] {
 
 a {
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
 
   &:hover {
-    color: white;
+    color: rgb(78, 78, 78);
     opacity: 0.8;
   }
 }
 
+#white-text {
+  color: white;
+}
 
 .container.movie {
   display: flex;

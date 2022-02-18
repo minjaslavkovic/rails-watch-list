@@ -34,23 +34,30 @@
   </div>
 </div>
 
+<div class="container">
+  <button class="btn btn-secondary">
+    <%= link_to "add a movie", new_list_bookmark_path(@list), :style=>'color: white' %>
+  </button>
+</div>
+
+
 
 <div class="container movie">
- <% @list.movies.each do |movie| %>
- <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+ <% @list.bookmarks.each do |bookmark| %>
   <div class="card movie">
     <div class="card-header">
       <img src="https://images.unsplash.com/photo-1532568547949-a09f1afe4d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"/>
     </div>
     <div class="card-body">
-      <h2><span><%= movie.title %></span>
+      <h2><span><%= bookmark.movie.title %></span>
       </h2>
-      <p><%= movie.overview %>
+      <p><%= bookmark.movie.overview %>
       </p>
       <p><%= bookmark.comment %></p>
     </div>
   </div>
   <% end %>
 </div>
+
 
 <div class="container">

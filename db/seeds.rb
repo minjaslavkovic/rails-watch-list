@@ -23,7 +23,7 @@ num_movies.times do
     puts "    added movie #{movie.title}, #{movie.overview} to the DB!"
   else
     puts "    ERROR: failed to save movie #{movie.title}, #{movie.overview} to the DB :("
-    puts "      REASON: #{movie.errors.inspect}"
+    puts "    REASON: #{movie.errors.inspect}"
   end
 end
 puts "  seeding finished, the movies database has #{Movie.count} entries"

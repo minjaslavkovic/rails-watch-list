@@ -25,7 +25,9 @@
           <p><i class="fa fa-star"></i> <%= bookmark.movie.rating %></p>
         </div>
         <p><%= bookmark.movie.overview %></p>
-        <p><%= bookmark.comment %></p>
+        <div class="review-bottom">
+          <p>Review: <%= bookmark.comment %></p>
+        </div>
       </div>
     </div>
     <% end %>

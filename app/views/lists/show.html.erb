@@ -1,7 +1,16 @@
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(@list.photo.key) if @list.photo.attached? %>)">
+<div class="banner show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(@list.photo.key) if @list.photo.attached? %>)">
   <div class="container">
     <h1><%= @list.name %> movies</h1>
+  </div>
+  <div class="top-right-count">
+    <p>
+    <% if @list.bookmarks.count == 1 %>
+      <%=  @list.bookmarks.count %> movie
+    <% else %>
+      <%= @list.bookmarks.count  %> movies
+    <% end %>
+    </p>
   </div>
 </div>
 
@@ -23,7 +32,7 @@
         <div class="card-body">
           <div class="movie-name-rating d-flex justify-content-between">
             <h2><span><%= bookmark.movie.title %></span></h2>
-            <p><i class="fa fa-star"></i> <%= bookmark.movie.rating %></p>
+            <p><i class="fa fa-star"></i> <%= bookmark.movie.rating.to_f %></p>
           </div>
           <p><%= bookmark.movie.overview %></p>
           <div class="review-bottom">

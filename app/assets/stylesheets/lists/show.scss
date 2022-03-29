@@ -77,6 +77,10 @@
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
+.form-control {
+  resize: none;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards.movie {

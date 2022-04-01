@@ -12,7 +12,6 @@ class ListsController < ApplicationController
       @bookmark = @list.bookmarks
     end
     @review = Review.new(list: @list)
-    @reviews = Review.all
   end
 
   def new

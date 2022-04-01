@@ -56,10 +56,10 @@
     </div>
     <div class="reviews">
       <h1>Reviews</h1>
-      <% if @reviews.empty? %>
+      <% if @list.reviews.empty? %>
         <small><em class="text-muted">Be the first one to review this list</em></small>
       <% end %>
-      <% @reviews.each do |review| %>
+      <% @list.reviews.each do |review| %>
         <div>
           <% review.rating.times do %>
             <i class="fas fa-star star-yellow"></i>

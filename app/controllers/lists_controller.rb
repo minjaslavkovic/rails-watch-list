@@ -6,7 +6,11 @@ class ListsController < ApplicationController
   end
 
   def show
-    @bookmark = @list.bookmarks
+    if params[:query].present?
+      @bookmark = @list.bookmarks.where("title ILIKE ?", "%#{params[:query]}%")
+    else
+      @bookmark = @list.bookmarks
+    end
     @review = Review.new(list: @list)
     @reviews = Review.all
   end

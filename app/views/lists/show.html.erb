@@ -14,7 +14,19 @@
   </div>
 </div>
 
-<div class="container d-flex justify-content-between">
+<div class="container search d-flex justify-content-between">
+  <%= form_tag list_path, method: :get do %>
+  <div class="d-flex">
+    <div class="search-bar">
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a movie"
+      %>
+    </div>
+      <%= submit_tag "Search", class: "btn btn-secondary" %>
+  </div>
+  <% end %>
   <button class="btn btn-secondary">
     <%= link_to "add a movie", new_list_bookmark_path(@list), style: 'color: white' %>
   </button>

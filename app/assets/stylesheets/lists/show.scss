@@ -81,6 +81,14 @@
   resize: none;
 }
 
+.search-bar {
+  width: 360px;
+}
+
+.container.search {
+  padding-right: 578px;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards.movie {

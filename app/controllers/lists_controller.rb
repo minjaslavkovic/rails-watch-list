@@ -7,7 +7,7 @@ class ListsController < ApplicationController
 
   def show
     if params[:query].present?
-      @bookmark = @list.bookmarks.where("title ILIKE ?", "%#{params[:query]}%")
+      @bookmark = @list.bookmarks.joins("INNER JOIN movies ON movies.id=bookmarks.movie_id").where("title ILIKE ?", "%#{params[:query]}%")
     else
       @bookmark = @list.bookmarks
     end

@@ -1,4 +1,19 @@
-<div class="container py-5">
+<div class="banner show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(@list.photo.key) if @list.photo.attached? %>)">
+  <div class="container">
+    <h1><%= @list.name %> movies</h1>
+  </div>
+  <div class="top-right-count">
+    <p>
+    <% if @list.bookmarks.count == 1 %>
+      <%=  @list.bookmarks.count %> movie
+    <% else %>
+      <%= @list.bookmarks.count  %> movies
+    <% end %>
+    </p>
+  </div>
+</div>
+
+<div class="container py-3">
   <div class="row">
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
@@ -6,7 +21,7 @@
         <%= simple_form_for [@list, @bookmark] do |f| %>
           <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
           <%= f.association :movie, collection: Movie.all.order(:title), prompt: 'Select a movie', input_html: { data: { controller: 'select2' } }%>
-          <%= f.submit class: 'btn btn-flat' %>
+          <%= f.submit class: 'btn btn-secondary' %>
         <% end %>
       </div>
     </div>

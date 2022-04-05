@@ -81,12 +81,29 @@
   resize: none;
 }
 
+.form-search {
+  flex-grow: 1;
+}
+
 .search-bar {
   width: 360px;
 }
 
 .container.search {
-  padding-right: 578px;
+  align-items: center;
+}
+
+.fa-plus {
+  color: rgb(114, 114, 114);
+  font-size: 24px;
+  padding-right: 15px;
+  padding-top: 3px;
+}
+
+.fa-trash {
+  color: rgb(114, 114, 114);
+  font-size: 24px;
+  padding-top: 3px;
 }
 
 // Smallest device

@@ -75,9 +75,7 @@
           <%= simple_form_for [@list, @review] do |f| %>
             <%= f.input :content, placeholder: "Add your review here..." %>
             <%= f.input :rating, as: :select, collection: (1..5), required: true, prompt: "What's your rating", input_html: { data: { controller: "jquery-bar-rating" } } %>
-            <div class="text-center">
-              <%= f.submit class:"btn btn-secondary" %>
-            </div>
+            <%= f.submit class:"btn btn-secondary" %>
           <% end %>
         </div>
       </div>

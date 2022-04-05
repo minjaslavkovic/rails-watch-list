@@ -31,6 +31,14 @@ body {
   text-align: center;
 }
 
+#typed {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  font-size: 32px;
+  text-align: center;
+}
+
 .banner p {
   font-size: 20px;
   color: rgba($color: #ffffff, $alpha: 0.7);

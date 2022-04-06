@@ -61,6 +61,14 @@
   color: rgb(201, 77, 77);
 }
 
+.br-theme-css-stars .br-widget a.br-active:after {
+  color: rgb(201, 77, 77) !important;
+}
+
+.br-theme-css-stars .br-widget a.br-selected:after {
+  color: rgb(201, 77, 77) !important;
+}
+
 .review-bottom {
   border-top: 1px solid rgb(206, 206, 206);
   p {

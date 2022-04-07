@@ -79,6 +79,9 @@
 .reviews {
   width: 30%;
   margin-left: 20px;
+  height: 100%;
+  position: sticky;
+  top: 90px;
 }
 
 .review-form {

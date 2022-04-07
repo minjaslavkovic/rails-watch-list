@@ -47,8 +47,13 @@
             <p><i class="fa fa-star"></i> <%= bookmark.movie.rating %></p>
           </div>
           <p class="overview-scroll"><%= bookmark.movie.overview %></p>
-          <div class="review-bottom">
+          <div class="review-bottom d-flex justify-content-between">
             <p>Review: <%= bookmark.comment %></p>
+            <p>
+              <%= link_to bookmark_path(bookmark), style: 'color: rgb(114, 114, 114)', method: :delete, data: { confirm: "Are you sure you want to delete this movie?" } do %>
+                <i class="fa fa-minus"></i>
+              <% end %>
+            </p>
           </div>
         </div>
       </div>

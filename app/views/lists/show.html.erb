@@ -46,7 +46,7 @@
             <h2><span><%= bookmark.movie.title %></span></h2>
             <p><i class="fa fa-star"></i> <%= bookmark.movie.rating.to_f %></p>
           </div>
-          <p><%= bookmark.movie.overview %></p>
+          <p><%= bookmark.movie.overview.split.first(25).join(' ') %>...</p>
           <div class="review-bottom">
             <p>Review: <%= bookmark.comment %></p>
           </div>

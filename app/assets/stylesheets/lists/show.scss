@@ -114,6 +114,15 @@
   padding-top: 3px;
 }
 
+.overview-scroll {
+  height: 80px;
+  overflow: scroll;
+}
+
+.overview-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards.movie {
